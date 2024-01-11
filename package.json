@@ -11,6 +11,7 @@
     "browserify": "^17.0.0",
     "dropzone": "5.7.2",
     "fabric": "^4.2.0",
+    "http-server": "^14.1.1",
     "tailwindcss": "^2.2.7",
     "terser": "^5.3.4"
   },
@@ -27,7 +28,8 @@
     "css": "postcss src/css/styles.css -o dist/css/styles.css",
     "prod-css": "postcss _site/src/css/styles.css -o _site/dist/css/styles.css",
     "build": "bundle exec jekyll build && npm run js && npm run css  && npm run prod-css && npm run min",
-    "build-docs": "npm run build && rsync -av * docs/ --exclude docs --exclude index.html --exclude _config.yml --exclude pnpm-lock.yaml --exclude README.md --exclude README-DxE.md"
+    "build-docs": "npm run build && rsync -av * docs/ --exclude docs --exclude index.html --exclude _config.yml --exclude pnpm-lock.yaml --exclude README.md --exclude README-DxE.md",
+    "serve": "cd _site && http-server -c-1"
   },
   "keywords": [],
   "author": "",

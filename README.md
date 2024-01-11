@@ -15,13 +15,13 @@ Open to additions and pull requests.
 
 Before using avatar-framer, you must ensure that Node.js and Jekyll are installed on your system. To install, do the following:
 
-1. Install [Node.js](https://nodejs.org) and npm.
+1. Install [Node.js](https://nodejs.org) and npm and pnpm.
 
 2. Install [Jekyll](https://jekyllrb.com/docs/installation)
 
 3. Install dependancies:
 ```
-npm install
+pnpm install
 ```
 
 ### Usage - Generate your site
@@ -36,8 +36,10 @@ jekyll build
 4. Create styles and and minify assets:
 
 ```
-npm run build
+pnpm run build
 ```
+
+5. Preview the site using `npm run serve` and going to http://localhost:8080
 
 ### Image requirements
 #### Frames
@@ -48,13 +50,6 @@ npm run build
 #### Previews
 * Previews should be at least `400px x 400px` and square.
 * Previews should be named `preview-1`, `preview-2` etc. and match the frame numbering.
-
-
-#### Run locally
-```
-jekyll serve
-```
-will start a server with your site at `localhost:4000`. See Jekyll docs for more information.
 
 ### Configuration
 All configuration options can be found in `_config.yml`. Colors can be configured in `tailwind.config.js`.
