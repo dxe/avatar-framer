@@ -71,8 +71,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var imgObj = new Image();
     imgObj.src = event.target.result;
-    console.log("A: " + event.target.result);
-    debugger;
 
     fabric.util.loadImage(imgObj.src, function() {
     image = new fabric.Image(imgObj);
