@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var imgObj = new Image();
     imgObj.src = event.target.result;
+    console.log("A: " + event.target.result);
+    debugger;
 
     fabric.util.loadImage(imgObj.src, function() {
     image = new fabric.Image(imgObj);
@@ -162,6 +164,11 @@ function resizeCanvas() {
 }
 
 function changeFrame(canvas, image) {
+  // Use relative paths to properly locate images when this site is being served
+  // under a base path such as "example.org/image-framer"
+  if (image.startsWith('/')) {
+    image = image.substring(1);
+  }
   canvas.setOverlayImage(image, function() {
         canvas.overlayImage.scaleToWidth(canvas.getWidth())
         canvas.renderAll()
