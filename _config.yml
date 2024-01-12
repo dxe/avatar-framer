@@ -78,4 +78,4 @@ exclude:
   - "package*.json"
   - README.md
   - README-DxE.md
-  - docs
+  - img/archive/
