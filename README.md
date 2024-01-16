@@ -41,6 +41,10 @@ pnpm run build
 
 5. Preview the site using `npm run serve` and going to http://localhost:8080
 
+6. Cache-busting: Prevent users who viewed the production site recently from
+loading old versions of frame-1, frame-2 etc after new versions are uploaded. Search all files for "v=" and increment the counter that follows. This will
+force the browser to request the image.
+
 ### Image requirements
 #### Frames
 * Frames should be `2000px x 2000px` for maximum resolution.
