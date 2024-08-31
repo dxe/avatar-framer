@@ -17,8 +17,8 @@ pnpm run build
 rm -rf ../static-s3/frame-generator/ --preserve root
 cp -r _site/ ../static-s3/frame-generator/
 cd ../static-s3/frame-generator/
-git status
 git add .
+git status
 git commit -m "Update avatar-framer"
 # Remember to 'git push'
 cd ../../avatar-framer
