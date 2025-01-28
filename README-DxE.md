@@ -22,4 +22,5 @@ git status
 git commit -m "Update avatar-framer"
 # Remember to 'git push'
 cd ../../avatar-framer
+# Remember to update cache busting version in dxe.io/frame shortlink too.
 ```
