@@ -27,23 +27,21 @@ pnpm install
 ### Usage - Generate your site
 1. Add your frames to `img/frames`
 2. Add your preview images to `img/previews`
-3. Generate the site:
+3. Cache-busting: Prevent users who viewed the production site recently from loading old versions of frame-1, frame-2 etc after new versions are uploaded. Search all files for "v=" and increment the counter that follows. This will force the browser to request the image.
+
+4. Generate the site:
 
 ```
 jekyll build
 ```
 
-4. Create styles and and minify assets:
+5. Create styles and and minify assets:
 
 ```
 pnpm run build
 ```
 
-5. Preview the site using `npm run serve` and going to http://localhost:8080
-
-6. Cache-busting: Prevent users who viewed the production site recently from
-loading old versions of frame-1, frame-2 etc after new versions are uploaded. Search all files for "v=" and increment the counter that follows. This will
-force the browser to request the image.
+6. Preview the site using `npm run serve` and going to http://localhost:8080
 
 ### Image requirements
 #### Frames
