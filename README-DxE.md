@@ -14,13 +14,15 @@ instructions for deploying to AWS S3.
 # Remember to update cachebust args!
 jekyll build
 pnpm run build
-rm -rf ../static-s3/frame-generator/ --preserve root
-cp -r _site/ ../static-s3/frame-generator/
-cd ../static-s3/frame-generator/
+cd ../static-s3/
+git pull
+rm -rf ./frame-generator/ --preserve root
+cp -r ../avatar-framer/_site/ ./frame-generator/
+cd ./frame-generator/
 git add .
 git status
 git commit -m "Update avatar-framer"
-# Remember to 'git push'
+git push
 cd ../../avatar-framer
 # Remember to update cache busting version in dxe.io/frame shortlink too.
 ```
