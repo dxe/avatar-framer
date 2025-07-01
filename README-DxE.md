@@ -12,6 +12,8 @@ instructions for deploying to AWS S3.
 
 ```bash
 # Remember to update cachebust args!
+pnpm install # only needed first time
+bundle install # only needed first time
 jekyll build
 pnpm run build
 cd ../static-s3/

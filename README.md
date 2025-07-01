@@ -22,6 +22,7 @@ Before using avatar-framer, you must ensure that Node.js and Jekyll are installe
 3. Install dependancies:
 ```
 pnpm install
+bundle install
 ```
 
 ### Usage - Generate your site
