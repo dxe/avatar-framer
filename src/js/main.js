@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
       'object:rotating': updateControls,
     });
 
-    canvas.setOverlayImage("{{ 'img/frames/frame-1.png?v=9' }}" , function() {
+    canvas.setOverlayImage("{{ 'img/frames/frame-1.png?v=10' }}" , function() {
         canvas.overlayImage.scaleToWidth(canvas.getWidth())
         canvas.renderAll()
       }, {
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(){
   {% for image in site.static_files %}
       {% if image.path contains 'frames/' %}
           document.getElementById("{{ image.basename }}").addEventListener("click", function (){
-            changeFrame(canvas, '{{ image.path }}?v=9');
+            changeFrame(canvas, '{{ image.path }}?v=10');
           });
       {% endif %}
   {% endfor %}
